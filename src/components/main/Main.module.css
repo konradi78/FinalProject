@@ -1,0 +1,68 @@
+.mainBanner{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-image: url('../../assets/images/main/main-bg.svg');
+    background-size: cover;
+    padding: 80px 2.5% 210px 2.5%;
+}
+.bannerTitle{
+    color: var(--txt-white, #FFF);
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 110%;
+}
+.checkBtn{
+    width: 218px;
+    padding: 1% 4%;
+    border-radius: var(--radius-small, 6px);
+    background: var(--green, #393);
+    border: none;
+    color: var(--txt-white, #FFF);
+    font-size: 20px;
+    text-wrap: nowrap;
+    font-weight: 600;
+    line-height: 130%;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .mainBanner{
+        padding: 60px 2% 120px 2%;
+    }
+    .bannerTitle{
+        font-size: 90px;
+    }
+  }
+@media (max-width: 768px) {
+    .mainBanner{
+        padding: 60px 2% 326px 2%;
+        background-position: 45%;
+    }
+    .bannerTitle{
+        font-size: 68px;
+    }
+    .checkBtn{
+        font-size: 18px;
+        width: 35%;
+    }
+  }
+  @media (max-width: 480px) {
+    .mainBanner{
+        padding: 60px 2% 215px 2%;
+    }
+    .bannerTitle{
+        font-size: 60px;
+    }
+    .checkBtn{
+        width: 40%;
+    }
+  }
+  @media (max-width: 360px) {
+    .bannerTitle{
+        font-size: 52px;
+    }
+    .checkBtn{
+        width: 45%;
+    }
+  }

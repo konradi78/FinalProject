@@ -1,0 +1,1 @@
+export const getDiscountValue = (product) => Math.floor(100 - (product.discont_price * 100 / product.price))

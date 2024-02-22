@@ -1,0 +1,85 @@
+.notFoundPage {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.2%;
+}
+
+.messageWrapper {
+    margin: auto;
+}
+
+.errorWrapper {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.messageWrapper {
+    text-align: center;
+}
+
+.messageWrapper h4 {
+    margin: 32px auto 16px auto;
+    color: var(--txt-black, #282828);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.messageWrapper p {
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.messageWrapper button {
+    margin-top: 32px;
+    padding: 16px 10%;
+    border: none;
+    border-radius: var(--radius-small, 6px);
+    background: var(--green, #393);
+    color: var(--txt-white, #FFF);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.messageWrapper button:hover {
+    background: var(--black, #282828);
+}
+
+@media (max-width: 768px) {
+    .four {
+        width: 20.8vw;
+    }
+
+    .zero {
+        width: 34.7vw;
+    }
+
+    .messageWrapper h4 {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 480px) {
+    .messageWrapper h4 {
+        font-size: 48px;
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+
+    .messageWrapper p {
+        font-size: 18px;
+    }
+
+    .messageWrapper button {
+        height: 47px;
+        padding: 12px 10%;
+    }
+}

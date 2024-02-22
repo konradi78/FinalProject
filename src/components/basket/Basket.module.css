@@ -1,0 +1,461 @@
+.basketMain{
+    padding: 40px 2.5% 0 2.5%;
+}
+.titleWrapper{
+    display: flex;
+    gap: 2.2%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.grayLine{
+    height: 1px;
+    width: 100%;
+    background-color: #DDDDDD;
+    position: relative;
+}
+.titleWrapper h4{
+    color: var(--txt-black, #282828);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 110%;
+    text-wrap: nowrap;
+}
+.titleWrapper button{
+    position: absolute;
+    right: 2.5%;
+    padding: 8px 16px;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    background: white;
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 126%;
+    cursor: pointer;
+}
+.basketMessage{
+    overflow: hidden;
+    color: var(--txt-black, #282828);
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 32px;
+}
+.continueBtn{
+    border-radius: var(--radius-small, 6px);
+    background: var(--green, #393);
+    border: none;
+    min-width: 21.7%;
+    height: 58px;
+    padding: 16px 4%;
+    color: var(--txt-white, #FFF);
+    font-size: 20px;
+    text-wrap: nowrap;
+    font-weight: 600;
+    line-height: 130%;
+    cursor: pointer;
+    transition: 250ms;
+    margin-bottom: 12px;
+}
+.basketEmpty button:hover{
+    background: var(--black, #282828);
+}
+.basket{
+    display: grid;
+    grid-template-columns: 2.7fr 2fr;
+    column-gap: 2.2%;
+}
+.productsPart{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.productInCart{
+    display: flex;
+    border-radius: var(--radius-big, 12px);
+    border: 1px solid var(--grey-divider, #DDD);
+    position: relative;
+}
+.productInCartImg{
+    width: 25%;
+    aspect-ratio: 1.1;
+    border-radius: var(--radius-big, 12px) 0 0 var(--radius-big, 12px);
+    border-right: 1px solid var(--grey-divider, #DDD);
+}
+.productInfo{
+    padding: 4.1% 4.1vw 4.1% 2.2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.productInfo h5{
+    overflow: hidden;
+    color: var(--txt-black, #282828);
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-right: 12%;
+}
+.deleteIcon{
+    position: absolute;
+    top: 10%;
+    right: 3.3%;
+    cursor: pointer;
+}
+.productProperties{
+    display: flex;
+    gap: 2.2vw;
+    align-items: center;
+    width: 100%;
+}
+.productCounter{
+    display: flex;
+}
+.priceBlock{
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+    width: 80%;
+}
+.productCounter button{
+    width: 4vw;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    padding: 17px auto;
+    color: var(--grey-divider, #DDD);
+    font-size: 30px;
+    background: none;
+    cursor: pointer;
+  }
+  .productCounter p{
+    width: 6.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--txt-black, #282828);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+    border-bottom: 1px solid var(--grey-divider, #DDD);
+    border-top: 1px solid var(--grey-divider, #DDD);
+    margin: 0 -6px;
+  }
+  .discountPrice{
+    color: var(--txt-black, #282828);
+    font-size: 2.85vw;
+    font-weight: 600;
+    line-height: 110%;
+  }
+  .price{
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 1.43vw;
+    font-weight: 500;
+    line-height: 130%;
+    text-decoration-line: line-through;
+  }
+  .orderDetailsPart{
+    border-radius: var(--radius-big, 12px);
+    background: var(--light-grey, #F1F3F4);
+    padding: 32px 2.2vw;
+  }
+  .orderDetailsPart h5{
+    color: var(--txt-black, #282828);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 110%;
+  }
+  .orderDetailsPart p{
+    margin-top: 24px;
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 130%;
+  }
+  .totalCost{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  #totalPrice{
+    color: var(--txt-black, #282828);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 110%;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  input{
+    padding: 16px 32px;
+    color: var(--txt-grey, #8B8B8B);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    background: var(--white, #FFF);
+  }
+  form button{
+    margin-top: 16px;
+    border-radius: var(--radius-small, 6px);
+    background: var(--green, #393);
+    border: none;
+    padding: 16px 32px;
+    color: var(--txt-white, #FFF);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+    cursor: pointer;
+  }
+  .errorMessage{
+    font-size: 10px;
+  }
+  .modalWindowWrapper{
+    position: fixed;
+    width: 100%;
+    height: 285%;
+    top: 0;
+    left: 0;
+    background-color: rgba(40, 40, 40, 0.40);
+    display: flex;
+  }
+  .modalWindow{
+    width: 440px;
+    margin: 260px auto auto auto;
+    border-radius: var(--radius-big, 12px);
+    background: var(--green, #393);
+    padding: 22px;
+    display: flex;
+    gap: 16px;
+    position: relative;
+  }
+  .modalWindow h5, h6{
+    color: var(--txt-white, #FFF);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 110%;
+  }
+  .modalWindow h6{
+    font-size: 1.25rem;
+    margin-top: 24px;
+    margin-right: 10%;
+  }
+  .modalWindow img{
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  cursor: pointer;
+  }
+  .backLinkMobile{
+    width: 60%;
+    margin: 12px auto 0 auto;
+    padding: 8px 16px;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #DDD);
+    background: white;
+    color: var(--txt-grey, #8B8B8B);
+    text-wrap: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 126%;
+    cursor: pointer;
+    display: none;
+  }
+  @media (max-width: 1000px) {
+    .basket{
+      grid-template-columns: 1fr 1fr;
+    }
+  .productInCartImg{
+    width: 35%;
+  }
+  .productProperties{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 12px;
+    gap: 12px;
+  }
+  .priceBlock{
+    gap: 1vw;
+    margin-right: 20%;
+  }
+  .discountPrice{
+    font-size: 3.8vw;
+  }
+  .price{
+    font-size: 1.9vw;
+  }
+  }
+  @media (max-width: 850px){
+    .orderDetailsPart p{
+      font-size: 38px;
+    }
+    #totalPrice{
+      font-size: 56px;
+    }
+  }
+  @media (max-width: 768px) {
+    .basket{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .titleWrapper h4 {
+      font-size: 56px;
+    }
+    .productInCartImg{
+      width: 20vw;
+    }
+    .productInfo{
+      padding: 20px auto 20px 2.6vw;
+    }
+    .productProperties{
+      flex-direction: row;
+      align-items: center;
+      margin-top: 12px;
+      gap: 12px;
+    }
+    .productProperties button{
+      width: 7vw;
+    }
+    .productCounter p{
+      width: 12vw;
+    }
+    .discountPrice{
+      font-size: 40px;
+    }
+    .price{
+      font-size: 20px;
+    }
+    .orderDetailsPart h5, .orderDetailsPart p{
+      font-size: 32px;
+    }
+    }
+@media (max-width: 650px){
+  .titleWrapper{
+    align-items: flex-start;
+  }
+  .titleWrapper h4 {
+    text-wrap: wrap;
+  }
+  .grayLine{
+    display: none;
+  }
+  .titleWrapper button{
+    position: static;
+    text-wrap: nowrap;
+    margin-top: 18px;
+  }
+  .productProperties button{
+    width: 6vw;
+  }
+  .productCounter p{
+    width: 9vw;
+  }
+  .priceBlock{
+    gap: 1.5vw;
+  }
+  .discountPrice{
+    font-size: 35px;
+  }
+  .price{
+    font-size: 18px;
+  }
+} 
+@media (max-width: 550px){
+  .titleWrapper h4 {
+    font-size: 48px;
+  }
+  .discountPrice{
+    font-size: 31px;
+  }
+  .price{
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px){
+  .modalWindow{
+    width: 330px;
+    padding: 52px 2.2% 52px 2.2%;
+  }
+  .modalWindow h5{
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  .modalWindow h6{
+    font-size: 18px;
+  }
+  .basketMessage{
+    font-size: 18px;
+  }
+  .titleWrapper button{
+    display: none;
+  }
+  .backLinkMobile{
+    display: block;
+  }
+  .productInCartImg{
+    width: 40vw;
+  }
+  .productCounter button{
+    width: 9.5vw;
+  }
+  .productCounter p{
+    width: 13vw;
+  }
+  .productProperties{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 12px;
+    gap: 12px;
+  }
+  .discountPrice{
+    font-size: 30px;
+  }
+  .price{
+    font-size: 16px;
+  }
+  .orderDetailsPart h5, .orderDetailsPart p{
+    font-size: 28px;
+  }
+  #totalPrice{
+    font-size: 48px;
+  }
+  input{
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+  form button{
+    margin-top: 12px;
+    padding: 16px 32px;
+    color: var(--txt-white, #FFF);
+    font-size: 18px;
+  }
+}
+@media (max-width: 380px){
+  .titleWrapper h4 {
+    font-size: 40px;
+  }
+  .modalWindow{
+    width: 90%;
+    padding: 65px 5% 52px 5%;
+  }
+  .modalWindow h5{
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 310px){
+  .modalWindow h5{
+    font-size: 22px;
+  }
+}

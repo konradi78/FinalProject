@@ -1,0 +1,112 @@
+.saleProductSamples {
+  padding: 80px 2.5% 0 2.5%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.title h4 {
+  color: var(--txt-black, #282828);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 110%;
+  margin-right: 2.2%;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background: #ddd;
+  position: relative;
+}
+
+.title a {
+  border-radius: var(--radius-small, 6px);
+  border: 1px solid var(--grey-divider, #ddd);
+  margin-right: 0;
+  padding: 8px 16px;
+  color: var(--txt-grey, #8B8B8B);
+  background-color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+  position: absolute;
+  right: 2.5%;
+}
+
+.saleProductsMobileWrapper,
+.mobileLink {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .title h4 {
+    font-size: 56px;
+  }
+  .slider {
+    display: none;
+  }
+  .saleProductsMobileWrapper {
+    display: grid;
+    grid-template-columns: calc(33% - 10px) calc(33% - 10px) calc(33% - 10px);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title h4 {
+    font-size: 48px;
+  }
+  .saleProductsMobileWrapper {
+    display: grid;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoriesSamples .link {
+    font-size: 14px;
+  }
+  .categoryTitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 450px) {
+  .line,
+  .title a {
+    display: none;
+  }
+  .mobileLink {
+    display: block;
+    width: 60%;
+    border-radius: var(--radius-small, 6px);
+    border: 1px solid var(--grey-divider, #ddd);
+    background-color: white;
+    margin: 24px auto 40px auto;
+    padding: 8px 16px;
+    color: var(--txt-grey, #8B8B8B);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 126%;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 40px;
+  }
+  .saleProductsMobileWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

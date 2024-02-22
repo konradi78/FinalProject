@@ -1,30 +1,32 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-// Импортируйте ваши страницы
-import HomePage from './pages/HomePage';
-import CategoriesPage from './pages/CategoriesPage';
-import ProductsPage from './pages/ProductsPage';
-import SalesPage from './pages/SalesPage';
-import NotFoundPage from './pages/NotFoundPage'; // Импортируйте ваш компонент страницы 404
+import "./App.css";
+import Footer from "./layout/footer/Footer";
+import Header from "./layout/header/Header";
+import { Routes, Route } from "react-router-dom";
+import Main from "./components/main/Main";
+import Categories from "./components/categories/Categories";
+import Products from "./components/products/Products";
+import Sales from "./components/sales/Sales";
+import Basket from "./components/basket/Basket";
+import ProductsByCategories from "./components/products/components/ProductsByCategories";
+import SingleProduct from "./components/products/SingleProduct";
+import NotFound from "./components/notFound/NotFound";
 
 function App() {
   return (
-    <Router>
-      <div>
+      <div className="App">
         <Header />
-        <Routes> {/* Используйте Routes вместо Switch */}
-          <Route path="/" element={<HomePage />} />
-          <Route path="/categories" element={<CategoriesPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/sales" element={<SalesPage />} />
-          <Route path="*" element={<NotFoundPage />} /> {/* Страница 404 */}
-          {/* Добавьте больше маршрутов по мере необходимости */}
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/sales" element={<Sales />} />
+          <Route path="/basket" element={<Basket />} />
+          <Route path="categories/:id" element={<ProductsByCategories />} />
+          <Route path="/products/:id" element={<SingleProduct />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>
-    </Router>
   );
 }
 
